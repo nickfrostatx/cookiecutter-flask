@@ -6,4 +6,4 @@ __pycache__
 .tox/
 build/
 dist/
-python_boilerplate/
+flask_bp/
