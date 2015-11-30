@@ -1,0 +1,12 @@
+{
+	"full_name": "Nick Frost",
+	"legal_name": "Nicholas Frost",
+	"email": "nickfrostatx@gmail.com",
+	"github_username": "nickfrostatx",
+	"project_name": "Python Boilerplate",
+	"project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+	"project_short_description": "This all does something.",
+	"release_date": "2015-01-13",
+	"year": "2015",
+	"version": "0.1.0"
+}
