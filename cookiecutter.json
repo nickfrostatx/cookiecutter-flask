@@ -3,6 +3,7 @@
 	"legal_name": "Nicholas Frost",
 	"email": "nickfrostatx@gmail.com",
 	"github_username": "nickfrostatx",
+	"pypi_username": "{{ cookiecutter.github_username }}",
 	"project_name": "Flask BP",
 	"project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
 	"project_short_description": "This all does something.",

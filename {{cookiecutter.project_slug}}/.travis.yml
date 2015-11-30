@@ -27,3 +27,11 @@ matrix:
     env: TOXENV=pypy-devel
 install: pip install tox
 script: tox
+deploy:
+  provider: pypi
+  user: {{ cookiecutter.pypi_username }}
+  password: TODO
+  distributions: sdist bdist_wheel
+  on:
+    tags: true
+    condition: $TRAVIS_JOB_NUMBER = *.1
