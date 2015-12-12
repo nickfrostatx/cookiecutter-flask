@@ -60,9 +60,9 @@ def test_lazy(client, monkeypatch):
 
     def should_not_run():
         raise AssertionError("This shouldn't run")
-    monkeypatch.setattr('expenses.session.RedisSessionInterface.open_session',
+    monkeypatch.setattr('{{ cookiecutter.project_slug }}.session.RedisSessionInterface.open_session',
                         should_not_run)
-    monkeypatch.setattr('expenses.session.RedisSessionInterface.save_session',
+    monkeypatch.setattr('{{ cookiecutter.project_slug }}.session.RedisSessionInterface.save_session',
                         should_not_run)
 
     rv = client.get('/lazy')
