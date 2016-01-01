@@ -7,7 +7,7 @@
 	"project_name": "Flask BP",
 	"project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
 	"project_short_description": "This all does something.",
-	"release_date": "2015-01-13",
-	"year": "2015",
+	"release_date": "2016-01-13",
+	"year": "2016",
 	"version": "0.1.0"
 }
