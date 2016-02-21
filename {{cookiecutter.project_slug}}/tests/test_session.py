@@ -92,7 +92,7 @@ def test_new_session(client):
 def test_permanent_session(client):
     rv = client.post('/permanent')
     data = json.loads(rv.data.decode())
-    assert data['data']['_permanent'] == True
+    assert data['data']['_permanent']
 
 
 def test_existing_session(client):
@@ -155,7 +155,7 @@ def test_rotate_session(client):
     assert 'session={0}'.format(data['sid']) in rv.headers['Set-Cookie']
     assert len(data['data']['csrf']) == 64
     assert data['data']['a'] == 'b'
-    assert client.application.redis.exists('session:abcd') == False
+    assert not client.application.redis.exists('session:abcd')
 
     db_d = client.application.redis.hgetall('session:{0}'.format(data['sid']))
     assert len(db_d[b'csrf']) == 64
