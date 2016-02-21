@@ -86,9 +86,10 @@ class RedisSessionInterface(SessionInterface):
 
         cookie_exp = self.get_expiration_time(app, session)
         secure = self.get_cookie_secure(app)
+        httponly = self.get_cookie_httponly(app)
         response.set_cookie(app.session_cookie_name, session.sid,
-                            expires=cookie_exp, httponly=True, domain=domain,
-                            secure=secure)
+                            expires=cookie_exp, httponly=httponly,
+                            domain=domain, secure=secure)
 
 
 class LazyRedisSessionInterface(RedisSessionInterface):
